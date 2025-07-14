@@ -58,60 +58,49 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Your Filters')),
-      body: PopScope(
-        canPop: false,
-        onPopInvokedWithResult: (bool didPop, dynamic result) async {
-          ref.read(filtersProvider.notifier).setAllFilters({
-            Filter.glutenFree: _glutenFreeSet,
-            Filter.lactoseFree: _lactoseFreeSet,
-            Filter.vegetarian: _vegetarianSet,
-            Filter.vegan: _veganSet,
-          });
-        },
-        child: Column(
-          children: [
-            _buildSwitchListTile(
-              title: 'Gluten-free',
-              subtitle: 'Only include gluten-free meals.',
-              value: _glutenFreeSet,
-              onChanged: (value) {
-                setState(() {
-                  _glutenFreeSet = value;
-                });
-              },
-            ),
-            _buildSwitchListTile(
-              title: 'Lactose-free',
-              subtitle: 'Only include lactose-free meals.',
-              value: _lactoseFreeSet,
-              onChanged: (value) {
-                setState(() {
-                  _lactoseFreeSet = value;
-                });
-              },
-            ),
-            _buildSwitchListTile(
-              title: 'Vegetarian',
-              subtitle: 'Only include vegetarian meals.',
-              value: _vegetarianSet,
-              onChanged: (value) {
-                setState(() {
-                  _vegetarianSet = value;
-                });
-              },
-            ),
-            _buildSwitchListTile(
-              title: 'Vegan',
-              subtitle: 'Only include vegan meals.',
-              value: _veganSet,
-              onChanged: (value) {
-                setState(() {
-                  _veganSet = value;
-                });
-              },
-            ),
-          ],
-        ),
+      body: Column(
+        children: [
+          _buildSwitchListTile(
+            title: 'Gluten-free',
+            subtitle: 'Only include gluten-free meals.',
+            value: _glutenFreeSet,
+            onChanged: (value) {
+              setState(() {
+                _glutenFreeSet = value;
+              });
+            },
+          ),
+          _buildSwitchListTile(
+            title: 'Lactose-free',
+            subtitle: 'Only include lactose-free meals.',
+            value: _lactoseFreeSet,
+            onChanged: (value) {
+              setState(() {
+                _lactoseFreeSet = value;
+              });
+            },
+          ),
+          _buildSwitchListTile(
+            title: 'Vegetarian',
+            subtitle: 'Only include vegetarian meals.',
+            value: _vegetarianSet,
+            onChanged: (value) {
+              setState(() {
+                _vegetarianSet = value;
+              });
+            },
+          ),
+          _buildSwitchListTile(
+            title: 'Vegan',
+            subtitle: 'Only include vegan meals.',
+            value: _veganSet,
+            onChanged: (value) {
+              setState(() {
+                _veganSet = value;
+              });
+            },
+          ),
+        ],
       ),
     );
   }

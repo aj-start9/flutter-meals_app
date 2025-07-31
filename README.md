@@ -17,6 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 https://res.cloudinary.com/dbs9tztxy/video/upload/v1752516436/Meals-App_rcztvk.mp4
 
 
+<video src="https://www.youtube.com/watch?v=lpx2zFkapIk" controls width="600"></video>
 
-https://www.youtube.com/watch?v=lpx2zFkapIk
+
 
